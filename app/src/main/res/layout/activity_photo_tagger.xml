@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.example.a3.MyDrawingArea
-        android:id="@+id/drawing_area"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_margin="5pt"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,24 +34,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/clear_button"
+            android:id="@+id/camera_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="200"
-            android:text="Clear"
+            android:text="Camera"
             android:layout_gravity="center"
             android:layout_margin="5pt"
-            android:onClick="onClear"/>
+            android:onClick="startCamera"/>
         <Button
             android:id="@+id/save_camera_image_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="200"
-
             android:text="Save"
             android:layout_gravity="center"
             android:layout_margin="5pt"
-            android:onClick="saveDrawing"/>
+            android:onClick="savePhoto"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -117,6 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="73dp"/>
     </LinearLayout>
+
     <com.example.a3.MyDrawingArea
         android:id="@+id/blank_drawing_area"
         android:layout_width="1dp"
